@@ -1,0 +1,1 @@
+This code implement trainning and testing in iris dataset for single dpu with multithreading and WRAM for the functions where there is data reutilization and therefore worth it to implement WRAM
