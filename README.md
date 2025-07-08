@@ -4,30 +4,30 @@
 
 UPMEM and C parallel implementation of an Multi-Layer perceptron in UPMEM DIMMs.
 
-The implementation follows a host-device fashion. The MRAM banks and for some cases the WRAM banks, of the UPMEM DIMMs are used.
-The training was implemented both on sequentially on a CPU and in single-DPU multithreading on the DIMMs.
-The inference was implemented both sequentially on a CPU and in multi-DPU multithreading on the DIMMs
+The implementation follows a host-device fashion. The MRAM banks and for some cases the WRAM banks, of the UPMEM DIMMs are used.  
+The training was implemented both on sequentially on a CPU and in single-DPU multithreading on the DIMMs.  
+The inference was implemented both sequentially on a CPU and in multi-DPU multithreading on the DIMMs.  
 
 The main kernel functions are the following:
 
-exponential: macro for exponential. For further detail read our paper. note that math.h does not work
-Ceil: ceil function. note that math.h does not work
-min: min function. note that math.h does not work
-max: max function. note that math.h does not work
-kMartixByMatrixElementwise: multithreading element-wise matrix multiplication.
-kMartixSubstractMatrix: multithreading element-wise matrix subtraction.
-kSigmoid: applies sigmoid to a matrix. Multithreading is used
-kSigmoid_d: applies sigmoid derivative to a matrix. Multithreading is used
-kReLU: ReLu function. Multithreading is used
-kDot: Matrix multiplication. Multithreading is used
-kDot_m1_m2T: Matrix multiplication where matrix 2 is transposed. Multithreading is used.
-kDot_m1T_m2: Matrix multiplication where matrix 1 is transposed. Multithreading is used.
-kFit: trains an MLP
-kTest: inference on MLP.
+exponential: macro for exponential. For further detail read our paper. note that math.h does not work  
+Ceil: ceil function. note that math.h does not work  
+min: min function. note that math.h does not work  
+max: max function. note that math.h does not work  
+kMartixByMatrixElementwise: multithreading element-wise matrix multiplication.  
+kMartixSubstractMatrix: multithreading element-wise matrix subtraction.  
+kSigmoid: applies sigmoid to a matrix. Multithreading is used  
+kSigmoid_d: applies sigmoid derivative to a matrix. Multithreading is used  
+kReLU: ReLu function. Multithreading is used  
+kDot: Matrix multiplication. Multithreading is used  
+kDot_m1_m2T: Matrix multiplication where matrix 2 is transposed. Multithreading is used.  
+kDot_m1T_m2: Matrix multiplication where matrix 1 is transposed. Multithreading is used.  
+kFit: trains an MLP  
+kTest: inference on MLP.  
 
-If you plan on using this code or parts of this code please cite: https://ieeexplore.ieee.org/abstract/document/10768222
-I highly advise that you read it before using the code.
-Author: Pedro Jose Carrinho Ribeiro
+If you plan on using this code or parts of this code please cite: https://ieeexplore.ieee.org/abstract/document/10768222  
+I highly advise that you read it before using the code.  
+Author: Pedro Jose Carrinho Ribeiro  
 
 ```
 @inproceedings{carrinho2024processing,
