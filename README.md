@@ -2,7 +2,7 @@
 
 
 
-UPMEM and C parallel implementation of an Multi-Layer perceptron in UPMEM DIMMs.
+UPMEM and C parallel implementation of an Multi-Layer perceptron in UPMEM DIMMs as desbribed by Pedro Carrinho et al (https://ieeexplore.ieee.org/abstract/document/10768222).
 
 The implementation follows a host-device fashion. The MRAM banks and for some cases the WRAM banks, of the UPMEM DIMMs are used.  
 The training was implemented both on sequentially on a CPU and in single-DPU multithreading on the DIMMs.  
